@@ -1,3 +1,6 @@
+/**
+ * demoData provides some fake data
+ */
 const demoData = [
     {
       "title":'Healthy Meal Plan',
