@@ -26,7 +26,7 @@ const Food = () => {
           {selectCategory.map((item) => (
             <div className="col-md-4 py-3">
               {/* <FoodCategory/> food card design */}
-              <FoodCategory items={item} />
+              <FoodCategory items={item}/>
             </div>
           ))}
         </div>

@@ -7,6 +7,7 @@ import { Card, Button } from "react-bootstrap";
  */
 const FoodDetailsCard = (props) => {
   const {
+    id,
     title,
     subtitle,
     description,
@@ -15,20 +16,26 @@ const FoodDetailsCard = (props) => {
     price,
   } = props.findFoodDetails;
   return (
-    <div className="container py-5 text-center">
-      <Card>
+    <div className="container py-3 text-center">
+      <Card style={{width:'45rem'}}>
         <Card.Body>
-        <Card.Img src={img} style={{width:'200px'}}></Card.Img>
-          <Card.Title className="display-5 text-secondary">{title}
-          </Card.Title>
+          <Card.Img src={img} style={{ width: "150px" }}></Card.Img>
+          <Card.Title className="display-5 text-secondary">{title}</Card.Title>
           {/* <Card.Text>{subtitle}</Card.Text> */}
           <Card.Text className="lead">{description}</Card.Text>
           <Card.Text>Type : {catagories}</Card.Text>
-          <Button variant="outline-danger">Add to cart</Button>
+          <Card.Text>Price : ${price}</Card.Text>
+          {/* add to cart btn needs to improve */}
+          <Button
+            onClick={() => props.handleAddToCart(props.findFoodDetails)}
+            variant="outline-danger"
+          >
+            Add to cart
+          </Button>
+          {/* add to cart btn needs a text field from where it can take food value/length */}
         </Card.Body>
       </Card>
     </div>
   );
 };
-
 export default FoodDetailsCard;

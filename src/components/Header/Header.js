@@ -1,6 +1,7 @@
 import React from "react";
 import './Header.css';
 import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div>
@@ -17,7 +18,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link style={{color:'#111'}}>Cart</Nav.Link>
+            <Nav.Link style={{color:'#111'}}><Link to="/review/cart">Cart</Link> </Nav.Link>
             <Nav.Link style={{color:'#111'}}>Login</Nav.Link>
             <Nav.Link href=""><button className="button-sign-up">Sign up</button></Nav.Link>
           </Nav>
