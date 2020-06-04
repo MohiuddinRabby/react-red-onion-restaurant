@@ -7,14 +7,14 @@ import { Link } from "react-router-dom";
  * and provides card design for 'Food' component
  */
 const FoodCategory = (props) => {
-  const { title, subtitle, img, catagories, price } = props.items;
+  const { keys,title, subtitle, img, catagories, price } = props.items;
   return (
     <div className="food-cat-card">
       <Card>
         <Card.Body>
           <Card.Img variant="top w-50 py-3" src={img} />
           <Card.Title>
-            <Link to={"/food/details/"+title}>{title}</Link>
+            <Link to={"/food/details/"+keys}>{title}</Link>
           </Card.Title>
           <Card.Text>{subtitle}</Card.Text>
           <Card.Text>Type : {catagories}</Card.Text>

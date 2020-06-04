@@ -11,8 +11,8 @@ import { addToDatabaseCart } from "../../utilities/databaseManager";
  * { title } = useParams()// provides data from App.js accord to route (/food/details/+title)
  */
 const FoodDetails = () => {
-  const { title } = useParams();
-  const findFood = demoData.filter((find) => find.title === title);
+  const { keys } = useParams();
+  const findFood = demoData.filter((find) => find.keys === keys);
   const [findFoodDetails, setFindFood] = useState(findFood);
   const [cart,setCart] = useState([]);
   /**
@@ -27,9 +27,9 @@ const FoodDetails = () => {
 const handleAddToCart = (foodItem) => {
   const newCart = [...cart,foodItem];
   setCart(newCart);
-  const sameProduct = newCart.filter(fd=>fd.id===foodItem.id);
+  const sameProduct = newCart.filter(fd=>fd.keys===foodItem.keys);
   const count = sameProduct.length;
-  addToDatabaseCart(foodItem.id,count);
+  addToDatabaseCart(foodItem.keys,count);
  };
   return (
    <div>
@@ -37,7 +37,7 @@ const handleAddToCart = (foodItem) => {
       {
         findFoodDetails.map((details) => (
           <FoodDetailsCard
-            key={details.title}
+            key={details.keys}
             handleAddToCart={handleAddToCart}
             findFoodDetails={details}
           ></FoodDetailsCard>

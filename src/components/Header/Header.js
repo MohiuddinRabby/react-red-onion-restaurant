@@ -18,7 +18,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link style={{color:'#111'}}><Link to="/review/cart">Cart</Link> </Nav.Link>
+            <Link className="nav-link" to="/review/cart">Cart</Link>
             <Nav.Link style={{color:'#111'}}>Login</Nav.Link>
             <Nav.Link href=""><button className="button-sign-up">Sign up</button></Nav.Link>
           </Nav>

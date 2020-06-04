@@ -7,7 +7,7 @@ import { Card, Button } from "react-bootstrap";
  */
 const FoodDetailsCard = (props) => {
   const {
-    id,
+    keys,
     title,
     subtitle,
     description,

@@ -9,7 +9,7 @@ const demoData = [
       "img":'https://i.ibb.co/Rp7Rq7j/lunch1.png',
       "catagories":'lunch',
       "price":9.99,
-      "id":100123
+      "keys":"100123"
     },
     {
       "title":'Fried Chicken Bento',
@@ -18,7 +18,7 @@ const demoData = [
       "img":'https://i.ibb.co/tZcTkjP/lunch2.png',
       "catagories":'lunch',
       "price":12.99,
-      "id":1001234,
+      "keys":"1001234",
     },
     {
       "title":'Trragon-Rubbed-Salmon',
@@ -27,7 +27,7 @@ const demoData = [
       "img":'https://i.ibb.co/swCTwsn/lunch3.png',
       "catagories":'lunch',
       "price":23.99,
-      "id":100145234,
+      "keys":"100145234",
     },
     {
       "title":'Indian Lunch',
@@ -36,7 +36,7 @@ const demoData = [
       "img":'https://i.ibb.co/Dt93FCR/lunch4.png',
       "catagories":'lunch',
       "price":15.99,
-      "id":10012347,
+      "keys":"10012347",
     },
     {
       "title":'Beaf Steak',
@@ -45,7 +45,7 @@ const demoData = [
       "img":'https://i.ibb.co/27bybcK/lunch5.png',
       "catagories":'lunch',
       "price":7.99,
-      "id":1001423,
+      "keys":"1001423",
     },
     {
       "title":'Honey Soy Salmon',
@@ -54,7 +54,7 @@ const demoData = [
       "img":'https://i.ibb.co/LtgpdK4/lunch6.png',
       "catagories":'lunch',
       "price":19.99,
-      "id":1770123,
+      "keys":"1770123",
     },
     {
       "title":'Salmon with Grapefruits',
@@ -63,7 +63,7 @@ const demoData = [
       "img":'https://i.ibb.co/WK4LXD1/dinner1.png',
       "catagories":'dinner',
       "price":9.99,
-      "id":108453,
+      "keys":"108453",
     },
     {
       "title":'Lemony Salmon',
@@ -72,7 +72,7 @@ const demoData = [
       "img":'https://i.ibb.co/pyM7s7b/dinner2.png',
       "catagories":'dinner',
       "price":12.99,
-      "id":199123,
+      "keys":"199123",
     },
     {
       "title":'Pork Tenderiain',
@@ -81,7 +81,7 @@ const demoData = [
       "img":'https://i.ibb.co/b6HW1gK/dinner3.png',
       "catagories":'dinner',
       "price":23.99,
-      "id":10483,
+      "keys":"10483",
     },
     {
       "title":'Baked Chicken',
@@ -90,7 +90,7 @@ const demoData = [
       "img":'https://i.ibb.co/6FbB519/dinner4.png',
       "catagories":'dinner',
       "price":15.99,
-      "id":107484,
+      "keys":"107484",
     },
     {
       "title":'Curlic Butter baked salmon',
@@ -99,7 +99,7 @@ const demoData = [
       "img":'https://i.ibb.co/qnV8whQ/dinner5.png',
       "catagories":'dinner',
       "price":7.99,
-      "id":114414,
+      "keys":"114414",
     },
     {
       "title":'French fries with cheese',
@@ -108,7 +108,7 @@ const demoData = [
       "img":'https://i.ibb.co/TvQbbMq/dinner6.png',
       "catagories":'dinner',
       "price":19.99,
-      "id":1178123,
+      "keys":"1178123",
     },
     {
       "title":'Bagel and cream cheese',
@@ -117,7 +117,7 @@ const demoData = [
       "img":'https://i.ibb.co/CtfZ9k5/breakfast2.png',
       "catagories":'breakfast',
       "price":9.99,
-      "id":1001234854,
+      "keys":"1001234854",
     },
     {
       "title":'Breakfast sandwich',
@@ -126,7 +126,7 @@ const demoData = [
       "img":'https://i.ibb.co/WVFfHzc/breakfast1.png',
       "catagories":'breakfast',
       "price":12.99,
-      "id":10012374874,
+      "keys":"10012374874",
     },
     {
       "title":'baked chicken',
@@ -135,7 +135,7 @@ const demoData = [
       "img":'https://i.ibb.co/wRQ8s4m/breakfast3.png',
       "catagories":'breakfast',
       "price":23.99,
-      "id":10014564723,
+      "keys":"10014564723",
     },
     {
       "title":'Eggs benedict',
@@ -144,7 +144,7 @@ const demoData = [
       "img":'https://i.ibb.co/gR1t0jS/breakfast4.png',
       "catagories":'breakfast',
       "price":15.99,
-      "id":1001778623,
+      "keys":"1001778623",
     },
     {
       "title":'Toast fried Egg Butter',
@@ -153,7 +153,7 @@ const demoData = [
       "img":'https://i.ibb.co/30MPLYX/breakfast5.png',
       "catagories":'breakfast',
       "price":7.99,
-      "id":100123545444,
+      "keys":"100123545444",
     },
     {
       "title":'Full breakfast egg toast',
@@ -162,7 +162,7 @@ const demoData = [
       "img":'https://i.ibb.co/qpHChjR/breakfast6.png',
       "catagories":'breakfast',
       "price":19.99,
-      "id":100142447423,
+      "keys":"100142447423",
     },
   ]
   export default demoData;
