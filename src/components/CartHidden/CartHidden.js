@@ -8,11 +8,18 @@ import React from "react";
  */
 const CartHidden = (props) => {
   const cart = props.cart;
+  let delivery=0;
   const total = cart.reduce(
     (total, item) => total + item.price * item.quantity,
     0
   );
-  const delivery = 3;
+  if(total>30){
+    delivery=3
+  }else if(total>1 && total <30){
+    delivery=5
+  }else{
+    delivery=0
+  }
   const grandTotal = total + delivery;
   // debugger;
   return (
