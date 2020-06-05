@@ -2,6 +2,8 @@ import React from "react";
 import './Header.css';
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 const Header = () => {
   return (
     <div>
@@ -18,7 +20,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Link className="nav-link" to="/review/cart">Cart</Link>
+            <Link className="nav-link" to="/review/cart"><FontAwesomeIcon icon={faShoppingCart}/>cart</Link>
             <Nav.Link style={{color:'#111'}}>Login</Nav.Link>
             <Nav.Link href=""><button className="button-sign-up">Sign up</button></Nav.Link>
           </Nav>

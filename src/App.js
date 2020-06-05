@@ -5,6 +5,14 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Notfound from "./components/Notfound/Notfound";
 import FoodDetails from "./components/FoodDetails/FoodDetails";
 import CartReview from "./components/CartReview/CartReview";
+//
+import { toast } from 'react-toastify';
+
+toast.configure({
+ autoClose: 1000,
+ draggable: false,
+      
+});
 function App() {
   return (
     <div>

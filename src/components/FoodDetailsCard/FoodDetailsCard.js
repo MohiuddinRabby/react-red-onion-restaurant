@@ -1,5 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 /**
  * FooDetailsCard to show food details card
  * gets data from 'FoodDetails' component
@@ -17,7 +19,7 @@ const FoodDetailsCard = (props) => {
   } = props.findFoodDetails;
   return (
     <div className="container py-3 text-center">
-      <Card style={{width:'45rem'}}>
+      <Card style={{width:'50rem'}}>
         <Card.Body>
           <Card.Img src={img} style={{ width: "150px" }}></Card.Img>
           <Card.Title className="display-5 text-secondary">{title}</Card.Title>

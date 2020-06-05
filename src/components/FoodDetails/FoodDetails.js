@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import demoData from "../../demoData";
 import FoodDetailsCard from "../FoodDetailsCard/FoodDetailsCard";
 import CartHidden from "../CartHidden/CartHidden";
-import { addToDatabaseCart } from "../../utilities/databaseManager";
+import { addToDatabaseCart, getDatabaseCart } from "../../utilities/databaseManager";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 /**
  * FoodDetails provides details of food
  * select food according food key or route param dynamically
@@ -19,20 +21,45 @@ const FoodDetails = () => {
    * {findFood} finds data accord to {title} route param from demoData or database demo
    * !!Needs to improve!!
    */
-
-
+  const notify = () => toast("Item added to cart!");
+  useEffect(()=>{
+//useEffect here to load data from local storage
+const getSavedDataFromLS = getDatabaseCart();
+const itemKeys = Object.keys(getSavedDataFromLS);
+//retrive ls data key and match with demoData key
+//find all matches and get data
+const cartProducts = itemKeys.map((key) => {
+  const product = demoData.find((fd) => fd.keys === key);
+  // console.log(product)
+  product.quantity = getSavedDataFromLS[key];
+  return product;
+});
+setCart(cartProducts);
+  },[])
 /**
  * handleAddToCart = (foodItem) - to send clicked item to cart
  */
 const handleAddToCart = (foodItem) => {
-  const newCart = [...cart,foodItem];
-  setCart(newCart);
-  const sameProduct = newCart.filter(fd=>fd.keys===foodItem.keys);
-  const count = sameProduct.length;
+  const productToBeAdded = foodItem.keys;
+  const sameProduct = cart.find(item=>item.keys===productToBeAdded);
+  let count = 1;
+  let newCart;
+  if(sameProduct){
+    notify();
+    count = sameProduct.quantity+1;
+    sameProduct.quantity=count;
+    const others = cart.filter ((item=>item.keys!==productToBeAdded));
+    newCart=[...others,sameProduct];
+  }else{
+    notify();
+    foodItem.quantity = 1;
+    newCart=[...cart,foodItem];
+  }
+  setCart(newCart)
   addToDatabaseCart(foodItem.keys,count);
  };
   return (
-   <div>
+   <div className="py-5">
       <div className="food-details-container float-left">
       {
         findFoodDetails.map((details) => (
@@ -48,9 +75,11 @@ const handleAddToCart = (foodItem) => {
          */
       }
     </div>
-    <div className="cart-hidden-container float-right">
+   <div style={{display:'none'}}>
+   <div className="cart-hidden-container float-right">
         <CartHidden cart={cart}></CartHidden>
     </div>
+   </div>
    </div>
   );
 };
