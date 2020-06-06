@@ -1,10 +1,6 @@
 .button-sign-up{
-    color: #fff;
     width: 100px;
     background-color: #F91944;
     border-radius: 15px;
     border: none;
-}
-.button-sign-up:hover{
-    background-color: #FDA3B5;
 }
