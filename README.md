@@ -1,5 +1,13 @@
 #### Demo @ (Red-onion)[https://red-onion-restaurant-63bea.web.app]
 
+#### Features
+
+> React
+
+> Local storage
+
+> FakeData
+
 #### To use the locally follow steps:
   
 ```
